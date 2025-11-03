@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Alice",
+    "dept": "HR",
+    "email": "alice@abc.com",
+    "salary": "32000"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "dept": "IT",
+    "email": "bob@abc.com",
+    "salary": 72000
+  },
+  {
+    "id": "3",
+    "name": "sam",
+    "dept": "manager",
+    "email": "sam@gmail.com",
+    "salary": "45000"
+  },
+  {
+    "id": "4",
+    "name": "sham  jackson",
+    "dept": "HR",
+    "email": "sham@gmail.com",
+    "salary": "56000"
+  },
+  {
+    "id": "5",
+    "name": "charlie",
+    "dept": "HR",
+    "email": "charlie@gmail.com",
+    "salary": "56000"
+  },
+  {
+    "id": "6",
+    "name": "lata",
+    "dept": "IT",
+    "email": "latt66@gmail.com",
+    "salary": "89000"
+  },
+  {
+    "id": "7",
+    "name": "abc",
+    "dept": "manager",
+    "email": "abc@gmail.com",
+    "salary": "20000"
+  },
+  {
+    "id": "8",
+    "name": "sandy",
+    "dept": "finance",
+    "email": "santy600@gmail.com",
+    "salary": "89000"
+  }
+]

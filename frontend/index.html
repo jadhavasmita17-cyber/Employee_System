@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Employee Management</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Employees</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container bg-white p-4 rounded shadow">
+    <!-- Alert area -->
+    <div id="alertBox"></div>
+
+    <!-- Employee Form -->
+    <h4 class="mb-3">Add / Update Employee</h4>
+    <form id="empForm" class="row g-2">
+      <div class="col-md-2"><input type="number" id="id" class="form-control" placeholder="ID" required></div>
+      <div class="col-md-3"><input type="text" id="name" class="form-control" placeholder="Name" required></div>
+      <div class="col-md-2"><input type="text" id="dept" class="form-control" placeholder="Department" required></div>
+      <div class="col-md-3"><input type="email" id="email" class="form-control" placeholder="Email" required></div>
+      <div class="col-md-2"><input type="number" id="salary" class="form-control" placeholder="Salary" required></div>
+      <div class="col-12 mt-2">
+        <button type="submit" class="btn btn-success" id="addBtn">Add</button>
+        <button type="button" class="btn btn-warning" id="updateBtn" style="display:none;">Update</button>
+        <button type="reset" class="btn btn-secondary" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <hr>
+
+    <!-- Search & Filter -->
+    <div class="row mb-3">
+      <div class="col-md-4"><input type="text" id="search" class="form-control" placeholder="Search by name"></div>
+      <div class="col-md-3">
+        <select id="deptFilter" class="form-select">
+          <option value="">All Departments</option>
+          <option>HR</option><option>IT</option><option>Finance</option><option>Manager</option>
+        </select>
+      </div>
+      <div class="col-md-5 d-flex">
+        <input type="number" id="minSalary" class="form-control me-2" placeholder="Min Salary">
+        <input type="number" id="maxSalary" class="form-control" placeholder="Max Salary">
+      </div>
+    </div>
+
+    <!-- Employee Table -->
+    <table class="table table-striped text-center" id="empTable">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th><th>Name</th><th>Dept</th><th>Email</th><th>Salary</th><th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-outline-primary" id="prev">Previous</button>
+      <button class="btn btn-outline-primary" id="next">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
